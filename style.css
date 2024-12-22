@@ -1,0 +1,3894 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Palanquin Dark", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: #f3fcf0;
+}
+
+.palanquin-dark-semibold {
+  font-family: "Palanquin Dark", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.palanquin-regular {
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  position: relative;
+  overflow-x: hidden;
+}
+#loader {
+  height: 100vh;
+  width: 100%;
+  background-color: #010101;
+  position: fixed;
+  z-index: 9999;
+}
+#loader-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loadertext {
+  height: 3.2vw;
+  width: 25vw;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+.loderlefttext span {
+  display: inline-block;
+}
+.loaderrighttext span {
+  display: inline-block;
+}
+.loderlefttext h1 {
+  color: #f3fcf0;
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 200;
+  font-size: 1.7vw;
+}
+.loderlefttext {
+  height: 100%;
+  overflow: hidden;
+  background-color: #010101;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 0.4vw;
+}
+.loaderrighttext {
+  background-color: #010101;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.loaderrighttext h1 {
+  color: #f3fcf0;
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 200;
+  font-size: 1.5vw;
+}
+.loaderlogo {
+  height: 3vw;
+  padding: 0.4vw 0.6vw;
+  overflow: hidden;
+  background-color: #00ff00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loaderlogoimg {
+  height: 100%;
+}
+.loaderlogo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.counter {
+  position: absolute;
+  top: 54.2%;
+  left: 48.6%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.9vw;
+}
+.loadingdiv {
+  height: 0.05vw;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 19vw;
+}
+.loaderinner {
+  height: 100%;
+  width: 20%;
+  background-color: #00ff00;
+}
+.counternumber h1 {
+  font-family: "Palanquin", sans-serif;
+  line-height: 1;
+  color: #f3fcf0;
+  font-size: 1.1vw;
+  font-weight: 400;
+}
+nav {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  height: 9vh;
+  width: 100%;
+}
+.navcontainer {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3vw;
+}
+.navitems {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navlinks {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 1vw;
+}
+
+.navlink i {
+  font-size: 1.5vw;
+  color: #9f9da0;
+  cursor: pointer;
+  transition: color 0.3s linear;
+}
+.navlink:hover i {
+  color: #00ff00;
+}
+.close {
+  font-size: 1.5vw;
+  color: #0b0b0b;
+  cursor: pointer;
+  display: none;
+}
+.logocontainer {
+  height: 2.2vw;
+  width: 5.5vw;
+  padding: 0.2vw 0.5vw;
+}
+.logoimg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 980;
+}
+.menu-wrapper {
+  position: relative;
+}
+.menuframe {
+  position: relative;
+  padding: 7vw 8vw 5vw 8vw;
+  background-color: #f3fcf0;
+  z-index: 960;
+}
+.menugrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 3.2vw;
+  grid-template-areas: "l1 l2 c r1 r2";
+}
+.menupages {
+  display: flex;
+  gap: 2vw;
+}
+.menupages:nth-child(1) {
+  grid-area: 1 / l1/1/l2;
+}
+.menupages:nth-child(2) {
+  grid-area: 1 / c/1/r1;
+}
+.menupages:nth-child(3) {
+  grid-area: r2;
+}
+.menutitle {
+  color: #4e4e4ebd;
+}
+.menutitle h4 {
+  margin-top: 0.1vw;
+  font-size: 1.1vw;
+  line-height: 1;
+  font-weight: 200;
+  font-family: "Palanquin", sans-serif;
+}
+.menulinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  cursor: pointer;
+  gap: 0.2vw;
+}
+.menuhoverline {
+  width: 0%;
+  transition: all 0.5s ease-out;
+  height: 0.08vw;
+  background-color: #0b0b0b;
+}
+.menulink:hover .menuhoverline {
+  width: 100%;
+}
+.menulink {
+  width: fit-content;
+  overflow: hidden;
+}
+.menulink h4 {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 1.75vw;
+  color: #0b0b0b;
+  font-family: "Palanquin", sans-serif;
+}
+#page1 {
+  height: 100vh;
+  width: 100%;
+}
+
+.page1-wrapper {
+  position: relative;
+  background-color: #010101;
+  height: 100%;
+  width: 100%;
+}
+.img-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.img-container img {
+  display: none;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.toscrolltext {
+  position: absolute;
+  height: 3.8vw;
+  width: 7vw;
+  top: 80%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.thescrolltext {
+  transform: translateY(-50%);
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.thescrolltext h1 {
+  font-size: 0.8vw;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.3;
+}
+.landingtext-container {
+  position: absolute;
+  z-index: 8;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 7.5vw;
+  gap: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.landingpagetexth1 {
+  overflow: hidden;
+}
+.landingheading h1 {
+  mix-blend-mode: difference;
+  line-height: 0.9;
+  font-weight: 200;
+  color: #f6f3f7;
+  letter-spacing: -0.6px;
+  font-size: 4.2vw;
+}
+.landingpara p {
+  line-height: 1.1;
+  font-size: 1.4vw;
+  color: #dfdbe1;
+  font-family: "Palanquin", sans-serif;
+}
+.ctabutton {
+  margin-top: 0.5vw;
+  width: 44%;
+  padding: 1vw 1vw;
+  cursor: pointer;
+  background-color: #dfdbe1;
+  display: flex;
+  border-radius: 3px;
+  transition: all 0.3s linear;
+  align-items: center;
+  justify-content: center;
+}
+.ctabutton:hover {
+  background-color: #00ff00;
+}
+.ctabutton:hover h1 {
+  scale: 0.97;
+}
+.ctabutton h1 {
+  line-height: 1;
+  transition: all 0.3s linear;
+  font-size: 1vw;
+  font-weight: 900;
+  color: #0b0b0b;
+  font-family: "Palanquin", sans-serif;
+}
+.img-container img.active {
+  display: block;
+}
+.transitionslide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  perspective: 200px;
+}
+.screen {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65%;
+  transform: translate(-50%, -50%) scale(2.5);
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 20px #0b0b0b;
+  justify-content: center;
+  width: 50%;
+  border-radius: 0.9vw;
+}
+.transitionimgcontainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.transitionimgsecond {
+  height: calc(100vh * 0.2);
+  width: calc(100vw * 0.07);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  border-radius: 0.7vw;
+  overflow: hidden;
+  background-color: #e1e9ed;
+}
+.transitionimgsecondimg {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.transitionimg {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  border-radius: 10px;
+  opacity: 0;
+}
+.imgsecondtext {
+  opacity: 0;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 20;
+  background-color: #070b1c;
+  height: 100%;
+  width: 100%;
+  padding: 1.8vw 0.7vw;
+}
+.imgsecondtext h1 {
+  color: #ffffff;
+  line-height: 1.1;
+  font-size: 1vw;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 500;
+}
+#india {
+  font-size: 2vw;
+  margin-top: 0.4vw;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.ipadscreen {
+  height: 100%;
+  padding: 2vw;
+  opacity: 0;
+  width: 100%;
+}
+.ipadnav {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 0 1.5vw;
+}
+.logobox {
+  height: 90%;
+  width: 28%;
+  padding: 0.4vw 0.4vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00ff00;
+}
+.ipadlogo {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.ipadnavright {
+  display: flex;
+  align-items: center;
+  gap: 0.3vw;
+}
+.ipadcontent {
+  height: 85%;
+  width: 100%;
+  display: flex;
+}
+.ipadleft {
+  height: 100%;
+  width: 42%;
+  border-radius: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ipadleftuppertextimagediv {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.ipadimage {
+  height: 90%;
+  width: 80%;
+  object-fit: cover;
+}
+.featurepicture {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: end;
+  top: -2%;
+  left: 0;
+  opacity: 0;
+}
+.earphonefeatureimg {
+  height: 95%;
+  width: 80%;
+  object-fit: cover;
+}
+.ipadleftuppertext {
+  height: 10%;
+  width: 100%;
+  margin-top: 1vw;
+}
+.ipadleftuppertext h1 {
+  font-size: 1.6vw;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+}
+.ipadleftuppertext h2 {
+  font-size: 0.85vw;
+  line-height: 1;
+  text-align: center;
+  margin-top: 0.3vw;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 400;
+}
+.ipadleftlowerpart {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.ipadlowerpartitems {
+  width: 40%;
+  padding-bottom: 0.05vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.ipadleftlowerpart h1 {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 0.82vw;
+  margin-bottom: 0.2vw;
+}
+.persentagediv {
+  height: 0.3vw;
+  width: 2.8vw;
+  border-radius: 20px;
+  border: 1px solid #0b0b0b;
+  overflow: hidden;
+}
+#greenline {
+  height: 100%;
+  width: 80%;
+  background-color: #00ff00;
+}
+
+.ipadright {
+  height: 100%;
+  width: 55%;
+  display: grid;
+  grid-template-columns: 28.5% 72%;
+  grid-template-rows: 26% 42% 30%;
+}
+.ipadrightupperpart {
+  grid-row: 1/2;
+  grid-column: 1/4;
+  padding: 0.1vw;
+  padding-bottom: 0.3vw;
+}
+.ipadrightupperpartwrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 0.7vw;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.ipadrightupperpart1 {
+  height: 70%;
+  width: 30%;
+  background-color: #070b1c;
+  border-radius: 0.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.4vw;
+  margin-bottom: 0.5vw;
+}
+.ipadrightinnerpart1 i {
+  color: #e1e9ed;
+  font-size: 1.1vw;
+}
+.ipadrightinnerpart2 h1 {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 500;
+  color: #e1e9ed;
+  font-size: 1.2vw;
+}
+.ipadrightinnerpart2 h2 {
+  margin-top: 0.2vw;
+  line-height: 1;
+  font-size: 0.69vw;
+  color: #e1e9ed;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+}
+.ipadrightupperpart2 {
+  height: 70%;
+  width: 30%;
+  background-color: #070b1c;
+  border-radius: 0.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.4vw;
+  margin-bottom: 0.5vw;
+}
+.ipadrightupperpart3 {
+  height: 70%;
+  width: 30%;
+  background-color: #070b1c;
+  border-radius: 0.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.6vw;
+  margin-bottom: 0.5vw;
+}
+.ipadrightpart1 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.ipadrightpart2 {
+  grid-row: 2/4;
+  grid-column: 2/4;
+  padding-left: 0.9vw;
+}
+.ipadrightpart2wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: #fee4b4;
+  border-radius: 0.7vw;
+  padding: 0 0.8vw;
+}
+.ipadrightpart21 {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ipadrightpart21text h1 {
+  font-weight: 500;
+  font-size: 1.8vw;
+  line-height: 1;
+}
+.ipadrightpart21text h2 {
+  margin-top: 0.3vw;
+  font-size: 1vw;
+  font-family: "Palanquin", sans-serif;
+  line-height: 1;
+}
+
+.ipadrightpart21icon i {
+  font-size: 1.7vw;
+}
+.ipadrightpart22 {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 1vw;
+  padding-left: 0.2vw;
+  justify-content: space-between;
+}
+.line {
+  height: 80%;
+  width: 1%;
+  flex-shrink: 0;
+  background-color: #f9bc8b;
+  position: relative;
+}
+.controlbar1 {
+  position: absolute;
+  left: -310%;
+  top: 75%;
+  width: 1.1vw;
+  height: 0.4vw;
+  background-color: #070b1c;
+}
+.controlbar2 {
+  position: absolute;
+  left: -310%;
+  top: 20%;
+  width: 1.1vw;
+  height: 0.4vw;
+  background-color: #070b1c;
+}
+.controlbar3 {
+  position: absolute;
+  left: -310%;
+  top: 60%;
+  width: 1.1vw;
+  height: 0.4vw;
+  background-color: #070b1c;
+}
+.controlbar4 {
+  position: absolute;
+  left: -310%;
+  top: 90%;
+  width: 1.1vw;
+  height: 0.4vw;
+  background-color: #070b1c;
+}
+.ipadrightpart3 {
+  padding-top: 0.9vw;
+}
+
+.ipadrightpart3wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: #fee4b4;
+  border-radius: 0.7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3vw;
+  padding: 0 0.8vw;
+}
+.ipadrightpart31 i {
+  font-size: 1.3vw;
+}
+
+.ipadrightpart32 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ipadrightpart32 h1 {
+  line-height: 1;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+.ipadrightpart32 h2 {
+  line-height: 1;
+  font-size: 0.69vw;
+  margin-top: 0.1vw;
+  font-family: "Palanquin", sans-serif;
+}
+.ipadrightpart32icon i {
+  font-size: 1.3vw;
+}
+.transitionslideuppertexts {
+  position: relative;
+  height: 10%;
+  top: 7%;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+  flex-direction: column;
+}
+.transitionslideuppertext {
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.transitionslideuppertext h1 {
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  line-height: 0.9;
+  font-size: 3.4vw;
+}
+
+.transitionslidelowertexts {
+  height: 14%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  top: 72%;
+  z-index: -1;
+}
+.transitionslidelowertext {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+.transitionslidelowertext h1 {
+  font-family: "Palanquin", sans-serif;
+  color: #9f9da0;
+  line-height: 1.25;
+  font-weight: 400;
+  font-size: 1.5vw;
+}
+
+.mobscreen {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%);
+  height: 60%;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 0 0.4vw #0b0b0b;
+  justify-content: center;
+  width: 14.4%;
+  border-radius: 2.3vw;
+  overflow: hidden;
+}
+.notification {
+  position: absolute;
+  transform: translateY(-170%);
+  top: 8%;
+  z-index: 5;
+  border-radius: 1.5vw;
+  height: 11%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #070b1c;
+  backdrop-filter: blur(2px);
+  color: #e1e9ed;
+  padding: 0 1vw;
+}
+.notificationpart1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.1vw;
+}
+.notificationpart1 i {
+  font-size: 0.6vw;
+}
+.notificationpart1 h2 {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 0.6vw;
+  font-family: "Palanquin", sans-serif;
+}
+.notificationpart2 h1 {
+  line-height: 1;
+  font-size: 0.8vw;
+  font-weight: 200;
+}
+.notificationpart2 h2 {
+  line-height: 1;
+  font-weight: 400;
+  font-size: 0.6vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonewrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding: 0 1.1vw;
+  border-radius: inherit;
+}
+.notch {
+  position: absolute;
+  height: 1.1vw;
+  width: 4vw;
+  border-radius: 20px;
+  background-color: #0b0b0b;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.iphonenav {
+  height: 12%;
+  width: 100%;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.iphonelogo {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+.iphonelogo img {
+  height: 1vw;
+  width: 2vw;
+  padding: 0.08vw 0.28vw;
+  background-color: #00ff00;
+  object-fit: contain;
+}
+.iphonenav i {
+  padding-bottom: 0.08vw;
+  font-size: 0.8vw;
+}
+
+.iphoneuppertext h1 {
+  line-height: 1;
+  font-size: 0.9vw;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: -0.6vw;
+}
+.iphoneuppertext h2 {
+  line-height: 1;
+  opacity: 0;
+  font-weight: 400;
+  font-size: 0.75vw;
+  text-align: center;
+  margin-top: 0.7vw;
+  margin-bottom: -0.7vw;
+  font-family: "Palanquin", sans-serif;
+}
+
+.iphonepicture {
+  height: 40%;
+  width: 100%;
+}
+.iphonepicture img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.iphonebattery {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -1.5vw;
+}
+.iphonebatteryitem {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.iphonebatteryitem h1 {
+  font-size: 0.5vw;
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+}
+.iphonepercentagecapsule {
+  height: 0.25vw;
+  width: 2vw;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 0.2vw;
+  border: 0.4px solid #0b0b0b;
+}
+.iphonegreenbar {
+  height: 100%;
+  width: 80%;
+  background-color: #00ff00;
+}
+.iphonecontent {
+  margin-top: 0.5vw;
+  height: 40%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 58% 42%;
+  grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+}
+
+.iphonecontent1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  padding: 0.3vw;
+  padding-right: 0.8vw;
+}
+.iphonecontent1wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  background-color: #fee4b4;
+}
+.iphonecontent1upperpart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40%;
+  width: 100%;
+  padding: 0 0.3vw;
+}
+.iphonecontent1text h1 {
+  line-height: 1;
+  font-size: 0.9vw;
+  font-weight: 500;
+}
+.iphonecontent1text h2 {
+  line-height: 1;
+  font-size: 0.6vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonecontent1upperpart i {
+  font-size: 1.1vw;
+}
+.iphonecontent1lowerpart {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.phoneline {
+  height: 80%;
+  width: 2%;
+  flex-shrink: 0;
+  background-color: #f9bc8b;
+  position: relative;
+}
+.phonecontrolbar1 {
+  position: absolute;
+  left: -160%;
+  top: 70%;
+  height: 0.2vw;
+  width: 0.6vw;
+  background-color: #070b1c;
+}
+.phonecontrolbar2 {
+  position: absolute;
+  left: -160%;
+  top: 30%;
+  height: 0.2vw;
+  width: 0.6vw;
+  background-color: #070b1c;
+}
+.phonecontrolbar3 {
+  position: absolute;
+  left: -160%;
+  top: 60%;
+  height: 0.2vw;
+  width: 0.6vw;
+  background-color: #070b1c;
+}
+.phonecontrolbar4 {
+  position: absolute;
+  left: -160%;
+  top: 80%;
+  height: 0.2vw;
+  width: 0.6vw;
+  background-color: #070b1c;
+}
+.iphonecontent2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding-bottom: 0.3vw;
+  padding-top: 0.3vw;
+}
+.iphonecontent2wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 0.4vw;
+  background-color: #070b1c;
+  color: #e1e9ed;
+}
+.iphonecontent21 i {
+  font-size: 0.8vw;
+}
+.iphonecontent22 {
+  margin-left: 0.4vw;
+}
+.iphonecontent22 h1 {
+  line-height: 1;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+.iphonecontent22 h2 {
+  line-height: 1;
+  font-size: 0.46vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonecontent3 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding-bottom: 0.3vw;
+  padding-top: 0.3vw;
+}
+.iphonecontent3wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 0.4vw;
+  background-color: #070b1c;
+  color: #e1e9ed;
+}
+.iphonecontent31 i {
+  font-size: 0.8vw;
+}
+.iphonecontent32 {
+  margin-left: 0.4vw;
+}
+.iphonecontent32 h1 {
+  line-height: 1;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+.iphonecontent32 h2 {
+  line-height: 1;
+  font-size: 0.46vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonecontent4 {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  padding-bottom: 0.3vw;
+  padding-top: 0.3vw;
+}
+.iphonecontent4wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 0.4vw;
+  background-color: #070b1c;
+  color: #e1e9ed;
+}
+.iphonecontent41 i {
+  font-size: 0.8vw;
+}
+.iphonecontent42 {
+  margin-left: 0.4vw;
+}
+.iphonecontent42 h1 {
+  line-height: 1;
+  font-size: 0.7vw;
+  font-weight: 500;
+}
+.iphonecontent42 h2 {
+  line-height: 1;
+  font-size: 0.46vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+.iphonecontent5 {
+  padding: 0.3vw;
+  padding-right: 0.8vw;
+}
+.iphonecontent5wrapper {
+  height: 100%;
+  width: 100%;
+  border-radius: 1vw;
+  background-color: #fee4b4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5vw;
+}
+.iphonecontent5text h1 {
+  line-height: 1;
+  font-size: 1vw;
+  font-weight: 500;
+}
+.iphonecontent5text h2 {
+  line-height: 1;
+  font-size: 0.6vw;
+  margin-top: 0.2vw;
+  font-family: "Palanquin", sans-serif;
+}
+
+#page2 {
+  height: 150vh;
+  width: 100%;
+}
+
+#page2-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.productsectionheading {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productsectionheading h1 {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 3.4vw;
+}
+.products {
+  height: 90%;
+  width: 100%;
+  padding: 0 3vw;
+  display: grid;
+  grid-template-columns: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(
+      100% / 4
+    );
+  grid-template-rows: 50% 50%;
+}
+.product1 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.product2 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.product3 {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.product4 {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.product5 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.product6 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.product7 {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.product8 {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.product {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.productimg {
+  height: 70%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.mainproductimg {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainproductimg img {
+  height: 85%;
+  width: 85%;
+  object-fit: contain;
+}
+.productgallery {
+  position: absolute;
+  top: 80%;
+  left: 4%;
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+.productgalleryimg {
+  transform: translateY(120%);
+  background-color: #f5f8f9;
+  height: 4.4vw;
+  width: 4.4vw;
+  cursor: pointer;
+}
+.productgalleryimg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#product-info {
+  height: 30%;
+  width: 100%;
+}
+#product-info h1 {
+  margin-top: 0.6vw;
+  line-height: 1;
+  font-weight: 200;
+  font-size: 1.5vw;
+}
+#product-info h2 {
+  margin-top: 0.5vw;
+  line-height: 1;
+  font-size: 1vw;
+  color: #9f9da0;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+}
+#product-info h3 {
+  margin-top: 0.7vw;
+  line-height: 1;
+  font-size: 1.23vw;
+  font-weight: 400;
+}
+.productbuttons {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin-top: 1.2vw;
+}
+.shopnowbutton {
+  background-color: #0b0b0b;
+  display: flex;
+  padding: 0.7vw 1.5vw;
+  border-radius: 2px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 0.4s linear;
+}
+.shopnowbutton:hover {
+  background-color: #00ff00;
+}
+.shopnowbutton:hover h4 {
+  color: #0b0b0b;
+}
+.shopnowbutton h4 {
+  transition: all 0.4s linear;
+  line-height: 1;
+  font-size: 1vw;
+  color: #e1e9ed;
+  font-weight: 500;
+  font-family: "Palanquin", sans-serif;
+}
+.learnmorebutton:hover {
+  background-color: #00ff00;
+  border-color: #00ff00;
+}
+.learnmorebutton {
+  transition: all 0.4s linear;
+  border: 2px solid #0b0b0b;
+  display: flex;
+  padding: 0.6vw 1.3vw;
+  cursor: pointer;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.learnmorebutton h4 {
+  line-height: 1;
+  font-size: 1vw;
+  font-weight: 500;
+  font-family: "Palanquin", sans-serif;
+}
+
+#page4 {
+  height: 120vh;
+  width: 100%;
+}
+#page4-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.categoryheading {
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.categoryheading h1 {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 3.4vw;
+}
+.categorylist {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+}
+.categorylistitems {
+  display: inline-flex;
+  align-items: end;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.8s ease-in-out;
+}
+.categorylistitems h1 {
+  display: block;
+  margin: 0 1.2vw;
+  text-transform: uppercase;
+  font-size: 5vw;
+  line-height: 1.8;
+  font-weight: 200;
+  font-family: "Palanquin", sans-serif;
+  transition: color 0.8s ease-in-out;
+}
+.categoryimgdiv {
+  position: relative;
+  height: 8vw;
+  background-color: #f3fcf0;
+}
+.categorylistitems .categoryimgdiv {
+  width: 16vw;
+}
+.categorylistitems:nth-child(1) .categoryimgdiv img {
+  position: absolute;
+  object-position: 60% 0%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.categorylistitems:nth-child(2) .categoryimgdiv img {
+  position: absolute;
+  object-position: 65% 0%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.categorylistitems:nth-child(3) .categoryimgdiv img {
+  position: absolute;
+  object-position: 62% 0%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.categorylistitems:nth-child(4) .categoryimgdiv img {
+  position: absolute;
+  object-position: 62% 0%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.categorylistitems:nth-child(5) .categoryimgdiv img {
+  position: absolute;
+  object-position: 82% 0%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.categorylistitems:nth-child(6) .categoryimgdiv img {
+  position: absolute;
+  object-position: 83% 0%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.categorypictures {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.categorypictures::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #b4afaf;
+  opacity: 0.8;
+  overflow: hidden;
+  z-index: 1;
+}
+.categorypictures img {
+  position: inherit;
+  height: 100%;
+  width: 100%;
+  object-position: 60% 0%;
+  object-fit: cover;
+}
+.categorypictures img:nth-child(5) {
+  position: inherit;
+  height: 100%;
+  width: 100%;
+  object-position: 100% 0%;
+  object-fit: cover;
+}
+.categorypictures img:nth-child(6) {
+  position: inherit;
+  height: 100%;
+  width: 100%;
+  object-position: 100% 0%;
+  object-fit: cover;
+}
+#page3 {
+  height: 180vh;
+  width: 100%;
+}
+
+.aboutusheading {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutusheading h1 {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 3.4vw;
+}
+.aboutuscontent {
+  height: 90%;
+  width: 100%;
+  display: flex;
+  perspective: 200px;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+.aboutuscontentcontainer {
+  position: relative;
+  height: 20%;
+  width: 100%;
+  padding: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.aboutuscontentcontainer h1 {
+  text-align: center;
+  z-index: 2;
+  opacity: 1;
+  scale: 0.5;
+  color: #0b0b0b;
+  padding: 1vw 1.4vw;
+  border-radius: 10px;
+  line-height: 1.1;
+  width: 37%;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 500;
+  font-size: 1.6vw;
+}
+.imgcontentdiv {
+  border-radius: 30px;
+  overflow: hidden;
+  height: 100%;
+  width: 20%;
+  position: relative;
+}
+
+#img4 {
+  object-position: bottom;
+}
+.imgcontentdiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.review {
+  height: 85vh;
+  width: 100%;
+}
+.reviewheading {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviewheading h1 {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 3.4vw;
+}
+.reviewheading i {
+  line-height: 1;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 600;
+  font-size: 2.6vw;
+  color: #00ff00;
+}
+.review-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.displaybox {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+}
+.displayreview {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 0.05vw;
+  width: 100%;
+  background-color: #00ff00;
+}
+.borderbox {
+  height: 28vw;
+  padding: 0.05vw;
+  overflow: hidden;
+  width: 28vw;
+  position: relative;
+}
+.reviewbox {
+  padding: 1vw;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f3fcf0;
+}
+.borderbox::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 150%;
+  height: 6%;
+  background-color: #00ff00;
+}
+.reviewline {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150%;
+  height: 6%;
+  background-color: #00ff00;
+}
+.borderbox::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 150%;
+  height: 6%;
+  background-color: #00ff00;
+}
+.reviewnumber {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+.square {
+  height: 0.6vw;
+  width: 0.6vw;
+  border: 1px solid #00ff00;
+}
+.reviewnote {
+  height: 80%;
+  width: 26vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.reviewnote h1 {
+  text-align: center;
+  font-size: 1.2vw;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Palanquin", sans-serif;
+  line-height: 1.1;
+}
+.reviewperson {
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5vw;
+}
+.reviewperson h1 {
+  font-size: 1.2vw;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Palanquin", sans-serif;
+  line-height: 1.1;
+}
+.spacediv {
+  height: 8vh;
+}
+footer {
+  height: 70vh;
+  width: 100%;
+  background-color: #0b0b0b;
+  color: #f3fcf0;
+  padding: 2.5vw 3vw;
+}
+.footerupperpart {
+  height: 75%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerupperpart1 {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footerupperpart2 {
+  height: 100%;
+  width: 20%;
+}
+.footerupperpart3 {
+  height: 100%;
+  width: 20%;
+}
+.footerupperpart4 {
+  height: 100%;
+  width: 20%;
+}
+.footerlogo {
+  height: 3.5vw;
+  width: fit-content;
+  padding: 0.5vw 0.5vw;
+  background-color: #00ff00;
+}
+.cutomersupport {
+  height: calc(100% - 5vw);
+  padding-top: 1vw;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.footericon {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.cutomersupport h1 {
+  font-size: 1.5vw;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Palanquin", sans-serif;
+  line-height: 1;
+}
+.phonenumber {
+  transition: all 0.5s linear;
+  cursor: pointer;
+  display: flex;
+  margin-top: 0.7vw;
+  height: 30%;
+  width: fit-content;
+  gap: 1.2vw;
+}
+.phonenumber:hover i {
+  color: #00ff00;
+}
+.actualnumber {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5vw;
+}
+.phonenumber i {
+  font-size: 1.6vw;
+}
+.actualnumber h1 {
+  font-size: 1.2vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.actualnumber h4 {
+  font-size: 0.8vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.email:hover i {
+  color: #00ff00;
+}
+.email {
+  transition: all 0.5s linear;
+  cursor: pointer;
+  padding-top: 0.5vw;
+  display: flex;
+  height: 30%;
+  width: fit-content;
+  gap: 1.2vw;
+}
+.footeremailicon {
+  height: 100%;
+  display: flex;
+  align-items: start;
+}
+.email i {
+  font-size: 1.6vw;
+}
+.actualemail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.actualemail h1 {
+  font-size: 1.2vw;
+  margin-bottom: 0.3vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.footerlogo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+.footerupperpart2 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.footerupperpart2 h1 {
+  font-size: 1.5vw;
+  margin-bottom: 0.3vw;
+  font-weight: 600;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.helplinks {
+  display: flex;
+  padding-top: 1.5vw;
+  flex-direction: column;
+  gap: 1vw;
+}
+.helplink h4 {
+  font-size: 0.9vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.helplink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+  width: fit-content;
+}
+.footerhoverline {
+  height: 0.05vw;
+  width: 0%;
+  transition: all 0.4s ease-out;
+  background-color: #00ff00;
+}
+.helplink:hover .footerhoverline {
+  width: 100%;
+}
+.footerupperpart3 {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.footerupperpart3 h1 {
+  font-size: 1.5vw;
+  margin-bottom: 0.3vw;
+  font-weight: 600;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.shoplink h4 {
+  font-size: 0.9vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.shoplinks {
+  display: flex;
+  padding-top: 1.5vw;
+  flex-direction: column;
+  gap: 1vw;
+}
+.shoplink:hover .footerhoverline {
+  width: 100%;
+}
+.shoplink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+  width: fit-content;
+}
+.shoplink {
+  cursor: pointer;
+}
+.helplink {
+  cursor: pointer;
+}
+.footerupperpart4 {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.footerupperpart4 h1 {
+  font-size: 1.5vw;
+  margin-bottom: 0.3vw;
+  font-weight: 600;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.footerupperpart5 {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.footerupperpart5 h1 {
+  font-size: 1.5vw;
+  margin-bottom: 0.3vw;
+  font-weight: 600;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.footerline {
+  height: 0.05vw;
+  width: 100%;
+  background-color: #f3fcf0c0;
+}
+.footerlowerpart {
+  height: calc(25% - 0.05vw);
+  width: 100%;
+  display: flex;
+  padding-top: 1.2vw;
+  gap: 1vw;
+  flex-direction: column;
+  align-items: center;
+}
+.footerlowerpart1 h1 {
+  font-size: 1vw;
+  margin-bottom: 0.3vw;
+  font-weight: 500;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.footerlowerpart2 {
+  margin-top: 0.4vw;
+}
+.sociallinks {
+  display: flex;
+  align-items: center;
+  gap: 2.7vw;
+}
+.sociallinks i {
+  cursor: pointer;
+  font-size: 1.8vw;
+  transition: all 0.5s linear;
+  font-family: "Palanquin", sans-serif;
+  font-weight: 300;
+}
+.sociallinks i:hover {
+  color: #00ff00;
+}
+.footerlowerpart3 {
+  margin-top: 0.7vw;
+}
+.footerlowerpart3 h4 {
+  font-size: 0.6vw;
+  font-weight: 400;
+  font-family: "Palanquin", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  #loader-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loadertext {
+    height: 10.2vw;
+    width: 95vw;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+  }
+  .loderlefttext span {
+    display: inline-block;
+  }
+  .loaderrighttext span {
+    display: inline-block;
+  }
+  .loderlefttext h1 {
+    color: #f3fcf0;
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 200;
+    font-size: 4.7vw;
+  }
+  .loderlefttext {
+    height: 100%;
+    overflow: hidden;
+    background-color: #010101;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-right: 0.4vw;
+  }
+  .loaderrighttext {
+    background-color: #010101;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .loaderrighttext h1 {
+    color: #f3fcf0;
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 200;
+    font-size: 4.7vw;
+  }
+  .loaderlogo {
+    height: 8vw;
+    padding: 0.4vw 0.6vw;
+    overflow: hidden;
+    background-color: #00ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loaderlogoimg {
+    height: 100%;
+  }
+  .loaderlogo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .counter {
+    position: absolute;
+    top: 55.2%;
+    left: 48.6%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.9vw;
+  }
+  .loadingdiv {
+    height: 0.05vw;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 55vw;
+  }
+  .loaderinner {
+    height: 100%;
+    width: 20%;
+    background-color: #00ff00;
+  }
+  .counternumber h1 {
+    font-family: "Palanquin", sans-serif;
+    line-height: 1;
+    color: #f3fcf0;
+    font-size: 3.1vw;
+    font-weight: 400;
+  }
+  .navcontainer {
+    padding: 0 2vw;
+  }
+  .navlinks {
+    gap: 2.2vw;
+  }
+
+  .navlink i {
+    font-size: 5.2vw;
+  }
+  .close {
+    font-size: 5.2vw;
+  }
+  .logocontainer {
+    height: 7vw;
+    width: 18vw;
+    padding: 0.4vw 1vw;
+  }
+
+  .menuframe {
+    padding: 28vw 2vw 15vw 2vw;
+  }
+  .menugrid {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-row-gap: 6vw;
+    grid-template-areas:
+      "l1"
+      "c"
+      "r1";
+  }
+  .menupages {
+    flex-direction: column;
+    gap: 4vw;
+  }
+  .menupages:nth-child(1) {
+    grid-area: l1;
+  }
+  .menupages:nth-child(2) {
+    grid-area: c;
+  }
+  .menupages:nth-child(3) {
+    grid-area: r1;
+  }
+  .menutitle h4 {
+    font-size: 4.1vw;
+  }
+  .menulinks {
+    gap: 0.4vw;
+  }
+  .menulink h4 {
+    font-size: 6vw;
+  }
+
+  .img-container img {
+    opacity: 0.7;
+  }
+  .toscrolltext {
+    display: none;
+  }
+  .landingtext-container {
+    left: 2vw;
+    gap: 6vw;
+  }
+  .landingheading h1 {
+    mix-blend-mode: difference;
+    line-height: 0.9;
+    font-weight: 200;
+    color: #f6f3f7;
+    letter-spacing: -0.6px;
+    font-size: 14.5vw;
+  }
+  .landingpara p {
+    width: 90%;
+    line-height: 1.2;
+    font-size: 5vw;
+  }
+  .ctabutton {
+    margin-top: 1.4vw;
+    width: 40%;
+    padding: 2.5vw 0.3vw;
+  }
+  .ctabutton h1 {
+    font-size: 3.5vw;
+  }
+  .transitionslide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    perspective: 200px;
+  }
+  .screen {
+    height: 50%;
+    box-shadow: inset 0 0 0 4px #0b0b0b;
+    width: 48%;
+    border-radius: 25px;
+  }
+  .transitionimgsecond {
+    height: 7vh;
+    width: 14vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    border-radius: 1vw;
+    overflow: hidden;
+    background-color: #e1e9ed;
+  }
+  .transitionimgsecondimg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .transitionimg {
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  .imgsecondtext {
+    opacity: 0;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 20;
+    background-color: #070b1c;
+    height: 100%;
+    width: 100%;
+    padding: 1.8vw 1.4vw;
+  }
+  .imgsecondtext h1 {
+    color: #ffffff;
+    line-height: 1.3;
+    font-size: 1.9vw;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 500;
+  }
+  #india {
+    font-size: 3vw;
+    margin-top: 1vw;
+    font-weight: 400;
+  }
+  .ipadscreen {
+    padding-top: 7vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    position: relative;
+  }
+  .ipadnav {
+    position: absolute;
+    top: 3.6%;
+    left: 0;
+    height: 12%;
+    padding: 0 2.5vw;
+  }
+  .logobox {
+    height: 100%;
+    width: 28%;
+    padding: 0.6vw 0.6vw;
+    background-color: #00ff00;
+  }
+  .ipadnavright {
+    display: flex;
+    align-items: center;
+    gap: 0.4vw;
+  }
+  .ipadnavright i {
+    font-size: 3.5vw;
+  }
+  .ipadcontent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .ipadleft {
+    height: 39.5%;
+    width: 100%;
+    border-radius: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .ipadleftuppertextimagediv {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .ipadimage {
+    height: 90%;
+    width: 80%;
+    object-fit: cover;
+  }
+  .featurepicture {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: end;
+    top: -2%;
+    left: 0;
+    opacity: 0;
+  }
+  .earphonefeatureimg {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .ipadleftuppertext {
+    height: 10%;
+    width: 100%;
+    margin-top: 1vw;
+  }
+  .ipadleftuppertext h1 {
+    font-size: 2.5vw;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+  }
+  .ipadleftuppertext h2 {
+    font-size: 1.2vw;
+    line-height: 1;
+    text-align: center;
+    margin-top: 0.5vw;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 400;
+  }
+  .ipadleftlowerpart {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+  }
+  .ipadlowerpartitems {
+    width: 80%;
+    padding-bottom: 0.05vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ipadleftlowerpart h1 {
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 600;
+    font-size: 1.4vw;
+    margin-bottom: 0.3vw;
+  }
+  .persentagediv {
+    height: 0.35vw;
+    width: 6vw;
+    border-radius: 20px;
+    border: 0.2px solid #0b0b0b;
+    overflow: hidden;
+  }
+  #greenline {
+    height: 100%;
+    width: 80%;
+    background-color: #00ff00;
+  }
+
+  .ipadright {
+    height: 60%;
+    width: 100%;
+    padding: 0 1.4vw;
+    display: grid;
+    grid-template-columns: 33% 14vw calc(67% - 14vw);
+    grid-template-rows: 28% calc(100% - 28%);
+  }
+  .ipadrightupperpart {
+    grid-row: 1/3;
+    grid-column: 1/2;
+    padding: 0.2vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.3vw;
+  }
+  .ipadrightupperpartwrapper {
+    height: 100%;
+    width: 100%;
+    border-radius: 0.7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .ipadrightupperpart1 {
+    height: 47%;
+    width: 100%;
+    background-color: #070b1c;
+    border-radius: 0.7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 1vw;
+    margin-bottom: 0.5vw;
+  }
+  .ipadrightinnerpart1 i {
+    color: #e1e9ed;
+    font-size: 3.3vw;
+  }
+  .ipadrightinnerpart2 h1 {
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 500;
+    color: #e1e9ed;
+    font-size: 3.2vw;
+  }
+  .ipadrightinnerpart2 h2 {
+    margin-top: 0.5vw;
+    line-height: 1;
+    font-size: 1.8vw;
+    color: #e1e9ed;
+    font-weight: 400;
+    font-family: "Palanquin", sans-serif;
+  }
+  .ipadrightupperpart2 {
+    height: 47%;
+    width: 100%;
+    background-color: #070b1c;
+    border-radius: 0.7vw;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1vw;
+    margin-bottom: 0.5vw;
+  }
+  .ipadrightupperpart3 {
+    height: 47%;
+    width: 100%;
+    background-color: #070b1c;
+    border-radius: 0.7vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 0 1vw;
+    margin-bottom: 0.5vw;
+  }
+  .ipadrightpart1 {
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+  .ipadrightpart2 {
+    grid-row: 2/4;
+    grid-column: 2/4;
+    padding-left: 0.9vw;
+  }
+  .ipadrightpart2wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #fee4b4;
+    border-radius: 2vw;
+    padding: 2vw 1.3vw;
+  }
+  .ipadrightpart21 {
+    height: 28%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+  .ipadrightpart21text h1 {
+    font-weight: 500;
+    font-size: 4vw;
+    line-height: 1;
+  }
+  .ipadrightpart21text h2 {
+    margin-top: 0.3vw;
+    font-size: 2.5vw;
+    font-family: "Palanquin", sans-serif;
+    line-height: 1;
+  }
+
+  .ipadrightpart21icon i {
+    font-size: 4vw;
+  }
+  .ipadrightpart22 {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 1vw;
+    padding-left: 0.2vw;
+    justify-content: space-between;
+  }
+  .line {
+    height: 80%;
+    width: 2.4%;
+    flex-shrink: 0;
+    background-color: #f9bc8b;
+    position: relative;
+  }
+  .controlbar1 {
+    position: absolute;
+    left: -150%;
+    top: 75%;
+    width: 2.5vw;
+    height: 0.5vw;
+    background-color: #070b1c;
+  }
+  .controlbar2 {
+    position: absolute;
+    left: -150%;
+    top: 20%;
+    width: 2.5vw;
+    height: 0.5vw;
+    background-color: #070b1c;
+  }
+  .controlbar3 {
+    position: absolute;
+    left: -150%;
+    top: 60%;
+    width: 2.5vw;
+    height: 0.5vw;
+    background-color: #070b1c;
+  }
+  .controlbar4 {
+    position: absolute;
+    left: -150%;
+    top: 90%;
+    width: 2.5vw;
+    height: 0.5vw;
+    background-color: #070b1c;
+  }
+  .ipadrightpart3 {
+    padding: 0.8vw;
+    padding-top: 0vw;
+    padding-left: 1.5vw;
+  }
+
+  .ipadrightpart3wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #fee4b4;
+    border-radius: 0.7vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3vw;
+    padding: 0 0.8vw;
+  }
+  .ipadrightpart31 i {
+    font-size: 3.4vw;
+  }
+
+  .ipadrightpart32 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ipadrightpart32 h1 {
+    line-height: 1;
+    font-size: 3.5vw;
+    font-weight: 500;
+  }
+  .ipadrightpart32 h2 {
+    line-height: 1;
+    font-size: 1.5vw;
+    margin-top: 0.1vw;
+    font-family: "Palanquin", sans-serif;
+  }
+  .ipadrightpart32icon i {
+    font-size: 3.5vw;
+  }
+  .transitionslideuppertexts {
+    position: relative;
+    height: 10%;
+    top:15%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    overflow: hidden;
+    flex-direction: column;
+  }
+  .transitionslideuppertext {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .transitionslideuppertext h1 {
+    font-family: "Palanquin", sans-serif;
+    font-weight: 600;
+    line-height: 0.9;
+    font-size: 6vw;
+  }
+
+  .transitionslidelowertexts {
+    height: 14%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    top: 64%;
+    z-index: -1;
+  }
+  .transitionslidelowertext {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  .transitionslidelowertext h1 {
+    font-family: "Palanquin", sans-serif;
+    color: #9f9da0;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 4.8vw;
+  }
+
+  .mobscreen {
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translateY(-50%);
+    height: 50%;
+    height: 50%;
+    padding: 0 1.7vw;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 0 4px #0b0b0b;
+    justify-content: center;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+  .notification {
+    position: absolute;
+    transform: translateY(-170%);
+    top: 7%;
+    z-index: 5;
+    border-radius: 50px;
+    height: 10%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #070b1c;
+    backdrop-filter: blur(2px);
+    color: #e1e9ed;
+    padding: 0 3vw;
+  }
+  .notificationpart1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.1vw;
+  }
+  .notificationpart1 i {
+    font-size: 2vw;
+  }
+  .notificationpart1 h2 {
+    line-height: 1;
+    font-weight: 400;
+    font-size: 2vw;
+    font-family: "Palanquin", sans-serif;
+  }
+  .notificationpart2 h1 {
+    line-height: 1;
+    font-size: 2.7vw;
+    font-weight: 200;
+  }
+  .notificationpart2 h2 {
+    line-height: 1;
+    font-weight: 400;
+    font-size: 2.3vw;
+    font-family: "Palanquin", sans-serif;
+  }
+  .iphonewrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding: 0 1.1vw;
+    border-radius: inherit;
+  }
+  .notch {
+    position: absolute;
+    height: 2.5vw;
+    width: 8vw;
+    border-radius: 20px;
+    background-color: #0b0b0b;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .iphonenav {
+    height: 12%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+  .iphonelogo {
+    height: 100%;
+    display: flex;
+    align-items: end;
+  }
+  .iphonelogo img {
+    height: 4vw;
+    width: 10vw;
+    padding: 0.08vw 0.58vw;
+    background-color: #00ff00;
+    object-fit: contain;
+  }
+  .iphonenav i {
+    padding-bottom: 0.08vw;
+    font-size: 3.2vw;
+  }
+
+  .iphoneuppertext h1 {
+    line-height: 1;
+    font-size: 2.6vw;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: -0.6vw;
+  }
+  .iphoneuppertext h2 {
+    line-height: 1;
+    opacity: 0;
+    font-weight: 400;
+    font-size: 0.75vw;
+    text-align: center;
+    margin-top: 0.7vw;
+    margin-bottom: -0.7vw;
+    font-family: "Palanquin", sans-serif;
+  }
+
+  .iphonepicture {
+    height: 40%;
+    width: 100%;
+  }
+  .iphonepicture img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .iphonebattery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -5.5vw;
+  }
+  .iphonebatteryitem {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .iphonebatteryitem h1 {
+    font-size: 2vw;
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 600;
+  }
+  .iphonepercentagecapsule {
+    height: 0.25vw;
+    width: 7vw;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 0.2vw;
+    border: 0.1px solid #0b0b0b;
+  }
+  .iphonegreenbar {
+    height: 100%;
+    width: 80%;
+    background-color: #00ff00;
+  }
+  .iphonecontent {
+    margin-top: 0.5vw;
+    height: 40%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 58% 42%;
+    grid-template-rows: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+  }
+
+  .iphonecontent1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    padding: 1vw;
+    padding-right: 1.8vw;
+  }
+  .iphonecontent1wrapper {
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+    background-color: #fee4b4;
+  }
+  .iphonecontent1upperpart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40%;
+    width: 100%;
+    padding: 0 1vw;
+  }
+  .iphonecontent1text h1 {
+    line-height: 1;
+    font-size: 3.4vw;
+    font-weight: 500;
+  }
+  .iphonecontent1text h2 {
+    line-height: 1;
+    font-size: 2vw;
+    margin-top: 0.2vw;
+    font-family: "Palanquin", sans-serif;
+  }
+  .iphonecontent1upperpart i {
+    font-size: 3.4vw;
+  }
+  .iphonecontent1lowerpart {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .phoneline {
+    height: 80%;
+    width: 2.5%;
+    flex-shrink: 0;
+    background-color: #f9bc8b;
+    position: relative;
+  }
+  .phonecontrolbar1 {
+    position: absolute;
+    left: -160%;
+    top: 70%;
+    height: 0.6vw;
+    width: 2.2vw;
+    background-color: #070b1c;
+  }
+  .phonecontrolbar2 {
+    position: absolute;
+    left: -160%;
+    top: 30%;
+    height: 0.6vw;
+    width: 2.2vw;
+    background-color: #070b1c;
+  }
+  .phonecontrolbar3 {
+    position: absolute;
+    left: -160%;
+    top: 60%;
+    height: 0.5vw;
+    width: 2.2vw;
+    background-color: #070b1c;
+  }
+  .phonecontrolbar4 {
+    position: absolute;
+    left: -160%;
+    top: 80%;
+    height: 0.6vw;
+    width: 2.2vw;
+    background-color: #070b1c;
+  }
+  .iphonecontent2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding-bottom: 0.3vw;
+    padding-top: 0.3vw;
+  }
+  .iphonecontent2wrapper {
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0.8vw;
+    background-color: #070b1c;
+    color: #e1e9ed;
+  }
+  .iphonecontent21 i {
+    font-size: 3vw;
+  }
+  .iphonecontent22 {
+    margin-left: 1.4vw;
+  }
+  .iphonecontent22 h1 {
+    line-height: 1;
+    font-size: 3vw;
+    font-weight: 400;
+  }
+  .iphonecontent22 h2 {
+    line-height: 1;
+    font-size: 1.76vw;
+    margin-top: 0.5vw;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 200;
+  }
+  .iphonecontent3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    padding-bottom: 0.3vw;
+    padding-top: 0.3vw;
+  }
+  .iphonecontent3wrapper {
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0.4vw;
+    background-color: #070b1c;
+    color: #e1e9ed;
+  }
+  .iphonecontent31 i {
+    font-size: 3vw;
+  }
+  .iphonecontent32 {
+    margin-left: 1.4vw;
+  }
+  .iphonecontent32 h1 {
+    line-height: 1;
+    font-size: 3vw;
+    font-weight: 400;
+  }
+  .iphonecontent32 h2 {
+    line-height: 1;
+    font-size: 0.46vw;
+    font-size: 1.76vw;
+    margin-top: 0.2vw;
+    font-weight: 200;
+    font-family: "Palanquin", sans-serif;
+  }
+  .iphonecontent4 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    padding-bottom: 0.3vw;
+    padding-top: 0.3vw;
+  }
+  .iphonecontent4wrapper {
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 0 0.4vw;
+    background-color: #070b1c;
+    color: #e1e9ed;
+  }
+  .iphonecontent41 i {
+    font-size: 3vw;
+  }
+  .iphonecontent42 {
+    margin-left: 1.4vw;
+  }
+  .iphonecontent42 h1 {
+    line-height: 1;
+    font-size: 3vw;
+    font-weight: 400;
+  }
+  .iphonecontent42 h2 {
+    line-height: 1;
+    font-size: 0.46vw;
+    margin-top: 0.2vw;
+    font-size: 1.76vw;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 200;
+  }
+  .iphonecontent5 {
+    padding: 0.3vw;
+    padding-right: 0.8vw;
+  }
+  .iphonecontent5wrapper {
+    height: 100%;
+    width: 100%;
+    border-radius: 1vw;
+    background-color: #fee4b4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1vw;
+  }
+  .iphonecontent5text h1 {
+    line-height: 1;
+    font-size: 4vw;
+    font-weight: 500;
+  }
+  .iphonecontent5text h2 {
+    line-height: 1;
+    font-size: 2.2vw;
+    margin-top: 0.5vw;
+    font-family: "Palanquin", sans-serif;
+  }
+
+  #page2 {
+    height: 150vh;
+    width: 100%;
+  }
+
+  #page2-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .productsectionheading {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .productsectionheading h1 {
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 600;
+    font-size: 7vw;
+  }
+  .products {
+    height: 95%;
+    width: 100%;
+    padding: 0 3vw;
+    display: grid;
+    grid-template-rows: calc(100% / 4) calc(100% / 4) calc(100% / 4) calc(
+        100% / 4
+      );
+    grid-template-columns: 50% 50%;
+  }
+  .product1 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .product2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  .product3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  .product4 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  .product5 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .product6 {
+    grid-column: 2/3;
+    grid-row: 3/4;
+  }
+  .product7 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .product8 {
+    grid-column: 2/3;
+    grid-row: 4/5;
+  }
+  .product {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .productimg {
+    height: 70%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .mainproductimg {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mainproductimg img {
+    height: 85%;
+    width: 85%;
+    object-fit: contain;
+  }
+  .productgallery {
+    position: absolute;
+    top: 62%;
+    left: 0%;
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+  }
+  .productgalleryimg {
+    transform: translateY(120%);
+    background-color: #f5f8f9;
+    height: 8vw;
+    width: 8vw;
+    cursor: pointer;
+  }
+  .productgalleryimg img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #product-info {
+    height: 30%;
+    width: 100%;
+  }
+  #product-info h1 {
+    margin-top: 0.8vw;
+    line-height: 1;
+    font-weight: 200;
+    font-size: 4vw;
+  }
+  #product-info h2 {
+    margin-top: 0.8vw;
+    line-height: 1;
+    font-size: 2vw;
+    color: #9f9da0;
+    font-weight: 400;
+    font-family: "Palanquin", sans-serif;
+  }
+  #product-info h3 {
+    margin-top: 1vw;
+    line-height: 1;
+    font-size: 3.4vw;
+    font-weight: 400;
+  }
+  .productbuttons {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    margin-top: 2vw;
+  }
+  .shopnowbutton {
+    background-color: #0b0b0b;
+    display: flex;
+    padding: 1.3vw 2vw;
+    border-radius: 2px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s linear;
+  }
+  .shopnowbutton:hover {
+    background-color: #00ff00;
+  }
+  .shopnowbutton:hover h4 {
+    color: #0b0b0b;
+  }
+  .shopnowbutton h4 {
+    transition: all 0.4s linear;
+    line-height: 1;
+    font-size: 1.7vw;
+    color: #e1e9ed;
+    font-weight: 400;
+    font-family: "Palanquin", sans-serif;
+  }
+  .learnmorebutton:hover {
+    background-color: #00ff00;
+    border-color: #00ff00;
+  }
+  .learnmorebutton {
+    transition: all 0.4s linear;
+    border: 1px solid #0b0b0b;
+    display: flex;
+    padding: 1.1vw 1.7vw;
+    cursor: pointer;
+    border-radius: 2px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .learnmorebutton h4 {
+    line-height: 1;
+    font-size: 1.7vw;
+    font-weight: 500;
+    font-family: "Palanquin", sans-serif;
+  }
+  .page4space {
+    display: none;
+  }
+  #page4 {
+    height: 60vh;
+    width: 100%;
+  }
+  #page4-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .categorylist {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+  }
+  .categorylistitems {
+    display: inline-flex;
+    align-items: end;
+    overflow: hidden;
+    cursor: pointer;
+    transition: opacity 0.8s ease-in-out;
+  }
+  .categorylistitems h1 {
+    display: block;
+    margin: 0 1.2vw;
+    text-transform: uppercase;
+    font-size: 8vw;
+    line-height: 1.8;
+    font-weight: 200;
+    font-family: "Palanquin", sans-serif;
+    transition: color 0.8s ease-in-out;
+  }
+  .categoryimgdiv {
+    position: relative;
+    height: 16vw;
+    background-color: #f3fcf0;
+  }
+  .categorylistitems .categoryimgdiv {
+    width: 30vw;
+  }
+  .categorylistitems:nth-child(1) .categoryimgdiv img {
+    position: absolute;
+    object-position: 60% 0%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .categorylistitems:nth-child(2) .categoryimgdiv img {
+    position: absolute;
+    object-position: 65% 0%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .categorylistitems:nth-child(3) .categoryimgdiv img {
+    position: absolute;
+    object-position: 62% 0%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .categorylistitems:nth-child(4) .categoryimgdiv img {
+    position: absolute;
+    object-position: 62% 0%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .categorylistitems:nth-child(5) .categoryimgdiv img {
+    position: absolute;
+    object-position: 82% 0%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .categorylistitems:nth-child(6) .categoryimgdiv img {
+    position: absolute;
+    object-position: 83% 0%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .categorypictures {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .categorypictures::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #b4afaf;
+    opacity: 0.8;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .categorypictures img {
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    object-position: 60% 0%;
+    object-fit: cover;
+  }
+  .categorypictures img:nth-child(5) {
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    object-position: 100% 0%;
+    object-fit: cover;
+  }
+  .categorypictures img:nth-child(6) {
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    object-position: 100% 0%;
+    object-fit: cover;
+  }
+  #page3 {
+    height: 110vh;
+    width: 100%;
+  }
+
+  .aboutusheading {
+    height: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .aboutusheading h1 {
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 600;
+    font-size: 7vw;
+  }
+  .aboutuscontent {
+    padding-top: 4vw;
+    height: 95%;
+    width: 100%;
+    display: flex;
+    perspective: 200px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+  .aboutuscontentcontainer {
+    position: relative;
+    height: 26%;
+    width: 100%;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .aboutuscontentcontainer h1 {
+    text-align: center;
+    z-index: 2;
+    opacity: 1;
+    scale: 0.5;
+    color: #0b0b0b;
+    padding: 1vw 1.4vw;
+    border-radius: 10px;
+    line-height: 1.1;
+    width: 88%;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 500;
+    font-size: 4vw;
+  }
+  .imgcontentdiv {
+    border-radius: 30px;
+    overflow: hidden;
+    height: 100%;
+    width: 90%;
+    position: relative;
+  }
+
+  #img4 {
+    object-position: bottom;
+  }
+  .imgcontentdiv img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .review {
+    height: 35vh;
+    width: 100%;
+  }
+  .reviewheading {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .reviewheading h1 {
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 600;
+    font-size: 6vw;
+  }
+  .reviewheading i {
+    line-height: 1;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 600;
+    font-size: 3.9vw;
+    color: #00ff00;
+  }
+  .review-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+  .displaybox {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    width: 100%;
+  }
+  .displayreview {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 0.05vw;
+    width: 100%;
+    background-color: #00ff00;
+  }
+  .borderbox {
+    height: 50vw;
+    padding: 0.05vw;
+    overflow: hidden;
+    width: 40vw;
+    position: relative;
+  }
+  .reviewbox {
+    padding: 1vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f3fcf0;
+  }
+  .borderbox::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 150%;
+    height: 6%;
+    background-color: #00ff00;
+  }
+  .reviewline {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 6%;
+    background-color: #00ff00;
+  }
+  .borderbox::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 150%;
+    height: 6%;
+    background-color: #00ff00;
+  }
+  .reviewnumber {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+  }
+  .square {
+    height: 1.3vw;
+    width: 1.3vw;
+    border: 1px solid #00ff00;
+  }
+  .reviewnote {
+    height: 80%;
+    width: 45vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .reviewnote h1 {
+    text-align: center;
+    font-size: 2.5vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Palanquin", sans-serif;
+    line-height: 1.1;
+  }
+  .reviewperson {
+    width: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+  }
+  .reviewperson h1 {
+    font-size: 2.5vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Palanquin", sans-serif;
+    line-height: 1.1;
+  }
+  .reviewperson i {
+    font-size: 2.5vw;
+  }
+  .spacediv {
+    height: 8vh;
+  }
+  footer {
+    height: 100vh;
+    width: 100%;
+    background-color: #0b0b0b;
+    color: #f3fcf0;
+    padding: 0vw 2vw;
+    padding-top: 2vw;
+  }
+  .footerupperpart {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 5vw;
+    justify-content: center;
+  }
+  .footerupperpart1 {
+    padding-top: 5vw;
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footerupperpart2 {
+    height: 20%;
+    width: 100%;
+  }
+  .footerupperpart3 {
+    height: 20%;
+    width: 20%;
+  }
+  .footerupperpart4 {
+    height: 20%;
+    width: 100%;
+  }
+  .footerlogo {
+    height: 8vw;
+    width: fit-content;
+    padding: 0.5vw 0.5vw;
+    background-color: #00ff00;
+  }
+  .cutomersupport {
+    height: calc(100% - 10vw);
+    margin-top: 6vw;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .footericon {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .cutomersupport h1 {
+    font-size: 5vw;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-family: "Palanquin", sans-serif;
+    line-height: 1;
+  }
+  .phonenumber {
+    transition: all 0.5s linear;
+    cursor: pointer;
+    display: flex;
+    margin-top: 3vw;
+    height: 40%;
+    width: fit-content;
+    gap: 2vw;
+  }
+  .phonenumber:hover i {
+    color: #00ff00;
+  }
+  .actualnumber {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5vw;
+  }
+  .phonenumber i {
+    font-size: 6vw;
+  }
+  .actualnumber h1 {
+    font-size: 5vw;
+    font-weight: 400;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.4;
+  }
+  .actualnumber h4 {
+    font-size: 3vw;
+    font-weight: 400;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .email:hover i {
+    color: #00ff00;
+  }
+  .email {
+    transition: all 0.5s linear;
+    cursor: pointer;
+    padding-top: 3vw;
+    display: flex;
+    height: 40%;
+    width: fit-content;
+    gap: 2vw;
+  }
+  .footeremailicon {
+    height: 100%;
+    display: flex;
+    align-items: start;
+  }
+  .email i {
+    font-size: 6vw;
+  }
+  .actualemail {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .actualemail h1 {
+    font-size: 5vw;
+    margin-bottom: 0.3vw;
+    font-weight: 400;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .footerlogo img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  .footerupperpart2 {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+  }
+  .footerupperpart2 h1 {
+    font-size: 5vw;
+    margin-bottom: 0.3vw;
+    font-weight: 600;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .helplinks {
+    display: flex;
+    padding-top: 1.5vw;
+    flex-direction: column;
+    gap: 1.1vw;
+  }
+  .helplink h4 {
+    font-size: 2.7vw;
+    font-weight: 200;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .helplink {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+    width: fit-content;
+  }
+  .footerhoverline {
+    height: 0.05vw;
+    width: 0%;
+    transition: all 0.4s ease-out;
+    background-color: #00ff00;
+  }
+  .helplink:hover .footerhoverline {
+    width: 100%;
+  }
+  .footerupperpart3 {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1vw;
+  }
+  .footerupperpart3 h1 {
+    font-size: 5vw;
+    margin-bottom: 0.3vw;
+    font-weight: 600;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .shoplink h4 {
+    font-size: 2.7vw;
+    font-weight: 200;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .shoplinks {
+    display: flex;
+    padding-top: 1.5vw;
+    flex-direction: column;
+    gap: 1vw;
+  }
+  .shoplink:hover .footerhoverline {
+    width: 100%;
+  }
+  .shoplink {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vw;
+    width: fit-content;
+  }
+  .shoplink {
+    cursor: pointer;
+  }
+  .helplink {
+    cursor: pointer;
+  }
+  .footerupperpart4 {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+  }
+  .footerupperpart4 h1 {
+    font-size: 5vw;
+    margin-bottom: 0.3vw;
+    font-weight: 600;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .footerupperpart5 {
+    height: 20%;
+    width: 100%;
+    margin-top: -5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 0.5vw;
+  }
+  .footerupperpart5 h1 {
+    font-size: 5vw;
+    margin-bottom: 0.3vw;
+    font-weight: 600;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .footerline {
+    height: 0.05vw;
+    width: 100%;
+    background-color: #f3fcf0c0;
+  }
+  .footerlowerpart {
+    height: calc(10% - 0.05vw);
+    width: 100%;
+    display: flex;
+    padding-top: 1.2vw;
+    gap: 1vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+  }
+  .footerlowerpart1 h1 {
+    font-size: 3vw;
+    margin-bottom: 0.3vw;
+    font-weight: 500;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+  .footerlowerpart2 {
+    margin-top: 1vw;
+  }
+  .sociallinks {
+    display: flex;
+    align-items: center;
+    gap: 5vw;
+  }
+  .sociallinks i {
+    cursor: pointer;
+    font-size: 5vw;
+    transition: all 0.5s linear;
+    font-family: "Palanquin", sans-serif;
+    font-weight: 300;
+  }
+  .sociallinks i:hover {
+    color: #00ff00;
+  }
+  .footerlowerpart3 {
+    margin-top: 2vw;
+  }
+  .footerlowerpart3 h4 {
+    font-size: 1vw;
+    font-weight: 400;
+    font-family: "Palanquin", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1;
+  }
+}
